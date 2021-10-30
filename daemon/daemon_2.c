@@ -159,7 +159,13 @@ int main(void)
 {
 
     //创建守护进程
-     create_daemon();
+    // create_daemon();
+    //使用创建守护进程的函数创建守护进程
+    if(daemon(0,0)==-1)
+    {
+        printf("create daemon failed\n");
+        return -1;
+    }
     //每5s检查内核日志，并保存
     while(1){
         check();
