@@ -61,6 +61,13 @@ int main(void)
     printf("Printing out all limits for pid=%d:\n",getpid());
     print_limits();
     print_rusage(RUSAGE_SELF);
+    printf("Before Modification,this is RLIMIT_CORE:\n");
+    do_limit(RLIMIT_CORE,"RLIMIT_CORE",&rlim);
+    printf("\nAfter Modification,this is RLIMIT_CORE:\n");
+    rlim.rlim_cur = 8 * 1024 * 1024;
+
+    setrlimit(RLIMIT_CORE,&rlim);
+    do_limit(RLIMIT_CORE,"RLIMIT_CORE",&rlim);
 
 }
 
