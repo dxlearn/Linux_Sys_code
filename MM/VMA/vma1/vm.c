@@ -2,7 +2,7 @@
 #include <linux/module.h>
 #include <linux/mm.h>
 #include <linux/sched.h>
-
+//程序功能：遍历进程的所有vma
 static int __init my_entry(void)
 {
     unsigned long start, end, len;
