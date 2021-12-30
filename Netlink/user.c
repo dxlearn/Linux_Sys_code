@@ -39,20 +39,21 @@ struct nlmsghdr {
     struct nlmsghdr *nlh;
     user_msg_info u_info;
     char *msg = "hell kernel, I am user process!";
-   
+    socklen_t len;
 
     //创建socket
     sockfd = socket(AF_NETLINK,SOCK_RAW, NETLINK_TEST);
 
     //初始化地址
     memset(&saddr,0,sizeof(saddr));
-
+    
+    //地址赋值
     saddr.nl_family = AF_NETLINK;
     saddr.nl_pad = 0;
     saddr.nl_pid = 66;
     saddr.nl_groups = 0;
 
-    //地址与sockt绑定
+    //地址与sockt绑定-bind
     bind(sockfd,(struct sockaddr *)&saddr,sizeof(saddr));
     
     //初始化目的地址
@@ -78,12 +79,15 @@ struct nlmsghdr {
     //发送消息
     sendto(sockfd,nlh,nlh->nlmsg_len,0,(struct sockaddr *)&daddr,sizeof(struct sockaddr_nl));
     printf("send kernel :%s",msg);
-
+    
+    memset(&u_info, 0, sizeof(u_info));
+    len = sizeof(struct sockaddr_nl);
     //接收消息
-  //  recvfrom(sockfd,&u_info,sizeof(user_msg_info),0,sizeof(sockaddr *)&daddr,&len);
-
+    recvfrom(sockfd,&u_info,sizeof(user_msg_info),0,(struct sockaddr *)&daddr,&len);
+    printf("\n");
     printf("from kernel:%s\n",u_info.msg);
     close(sockfd);
+    return 0;
 }
 
 
