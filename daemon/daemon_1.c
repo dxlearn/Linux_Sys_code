@@ -25,6 +25,8 @@
 #define KLOG_SIZE_UNREAD   9
 #define KLOG_SIZE_BUFFER   10
 
+
+
 /* we use 'Linux version' string instead of Oops in this lab */
 //#define OOPS_LOG  "Oops"
 #define OOPS_LOG  "Linux version"
