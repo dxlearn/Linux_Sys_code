@@ -8,6 +8,8 @@
     (void) (&_min1 == &_min2);\
     _min1 < _min2 ? _min1 : _min2; })
 
+#define A int
+
 //使用方法2 ：typeof()定义一个用于接收函数返回值的变量
 struct apple{
     int weight;
@@ -20,7 +22,10 @@ struct apple* get_app_info()
     a1 = malloc(sizeof(struct apple));
     a1->weight = 2;
     a1->color = 1;
+    A test = 1;
+    print("%d",test)
     return a1;
+
 }
 
 
