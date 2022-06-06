@@ -24,11 +24,7 @@ int main(void){
         printf("After Modification:Current process's priority(20-nice):");
         priority = getpriority(PRIO_PROCESS,0);
         printf("%d\n",priority);
-
-
     }
   
     return 0;
-
-
 }
