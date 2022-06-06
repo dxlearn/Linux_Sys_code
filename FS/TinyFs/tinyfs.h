@@ -6,7 +6,7 @@
 struct dir_entry{
     char filename[MAXLEN];
     uint8_t idx;
-}
+};
 
 //定义文件的格式
 struct file_blk{
