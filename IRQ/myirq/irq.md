@@ -2,6 +2,8 @@
 中断子系统讲解：
 https://blog.csdn.net/weixin_41028621/category_8797155.html
 http://wiki.100ask.org/index.php?title=%E7%AC%AC%E4%BA%94%E8%AF%BE._%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E8%AE%BE%E5%A4%87%E6%A0%91&variant=zh
+https://www.cnblogs.com/arnoldlu/category/1117988.html
+三大结构体：https://www.cnblogs.com/lifexy/p/7506504.html
 ## 一些关键词
 异步中断：中断是异步产生的，不是由CPU执行程序产生的，中断属于异常的一种，中断是唯一与CPU运行无关的异常
 
@@ -122,6 +124,9 @@ struct irq_desc {
 全局数组的方式容易导致内存空间的浪费
 
 https://blog.csdn.net/weixin_41028621/article/details/101753159
+
+中断的函数执行流程：
+https://www.cnblogs.com/arnoldlu/p/8659981.html
 
 ## request_irq
 实现动态地申请注册一个中断，根据传入的irq号获得数组irq_desc中以irq未下标的元素，然后动态地创建一个irqaction的描述符，根据传入的参数初始化新生成的irqaction描述符，最后调用函数_setup_irq()把该描述符假如到IRQ链表中，完成中断的动态申请及注册。
