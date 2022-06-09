@@ -7,6 +7,8 @@ http://wiki.100ask.org/index.php?title=%E7%AC%AC%E4%BA%94%E8%AF%BE._%E4%B8%AD%E6
 https://www.cnblogs.com/arnoldlu/category/1117988.html
 
 三大结构体：https://www.cnblogs.com/lifexy/p/7506504.html
+yingjian:https://blog.csdn.net/xiaojsj111/article/details/14129661
+
 ## 一些关键词
 异步中断：中断是异步产生的，不是由CPU执行程序产生的，中断属于异常的一种，中断是唯一与CPU运行无关的异常
 
