@@ -154,3 +154,7 @@ request_irq(unsigned int irq, irq_handler_t handler, unsigned long flags,const c
 
 x86 process:
 https://blog.csdn.net/yin262/article/details/53994699
+
+
+
+!!!!!!!!!!!net_irq:https://jishuin.proginn.com/p/763bfbd69efd
