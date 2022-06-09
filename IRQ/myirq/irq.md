@@ -151,3 +151,6 @@ request_irq(unsigned int irq, irq_handler_t handler, unsigned long flags,const c
 ④asm_do_IRQ根据中断号调用irq_desc[??]数组项的处理函数handle_irq
 ⑤handle_irq接着会调用irq_desc[??]中chip成员设置硬件，比如清除中断，禁止中断，重新使能中断
 ⑥handle_irq会逐个调用action成员链表中注册的处理函数
+
+x86 process:
+https://blog.csdn.net/yin262/article/details/53994699
