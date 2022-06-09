@@ -143,3 +143,11 @@ request_irq(unsigned int irq, irq_handler_t handler, unsigned long flags,const c
 	return request_threaded_irq(irq, handler, NULL, flags, name, dev);
 }
 ```
+
+ 中断处理的流程：(https://blog.csdn.net/LuckyDog0623/article/details/120912442)
+①发生中断时，cpu响应执行异常向量表__vectors_start  
+②接着到--》vector_irq中断代码（在这里会计算返回值，保存一些寄存器，进入管理模式）
+③vector_irq最后会调用中断处理总入口asm_do_IRQ
+④asm_do_IRQ根据中断号调用irq_desc[??]数组项的处理函数handle_irq
+⑤handle_irq接着会调用irq_desc[??]中chip成员设置硬件，比如清除中断，禁止中断，重新使能中断
+⑥handle_irq会逐个调用action成员链表中注册的处理函数
