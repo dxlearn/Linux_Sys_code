@@ -79,6 +79,7 @@ static int __init my_init(void)
 static void __exit my_exit(void)
 {
     printk("end\n");
+    
     kthread_stop(thread);
 }
 MODULE_LICENSE("GPL");
