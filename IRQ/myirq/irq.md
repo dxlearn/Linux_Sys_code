@@ -185,4 +185,6 @@ NAPI:https://baijiahao.baidu.com/s?id=1712167031976582525&wfr=spider&for=pc
 NAPI:https://www.jianshu.com/p/7d4e36c0abe8
 Best NAPI:https://blog.csdn.net/Rong_Toa/article/details/109401935
 NAPI:https://sniffer.site/2020/05/12/%E4%BB%8Enapi%E8%AF%B4%E4%B8%80%E8%AF%B4linux%E5%86%85%E6%A0%B8%E6%95%B0%E6%8D%AE%E7%9A%84%E6%8E%A5%E6%94%B6%E6%B5%81%E7%A8%8B/
+
+NAPI和非NAPI:https://chengqian90.com/Linux%E5%86%85%E6%A0%B8/NAPI-%E9%9D%9ENAPI%E6%94%B6%E5%8C%85%E5%88%86%E6%9E%90.html
 linux网卡ring buffer学习笔记
