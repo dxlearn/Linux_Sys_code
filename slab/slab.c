@@ -15,6 +15,8 @@ static int __init create(void)
     my_cache=kmem_cache_create("test_obj",20,8,(SLAB_RECLAIM_ACCOUNT),NULL);
     //通过创建的slab，分配一个缓存对象kbuf
     kbuf=kmem_cache_alloc(my_cache,GFP_ATOMIC);
+    //test dump_stack()
+    //dump_stack();
     if(!kbuf)
     {
         pr_err("failed to create a cache object\n");
