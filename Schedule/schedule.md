@@ -12,3 +12,7 @@ https://zhuanlan.zhihu.com/p/336681382
 3.cpu_context是发生进程切换时，保存当前进程的上下文，保存在当前进程的进程描述符中。
 
 4.pt_regs表征发生异常时处理器现场，cpu_context发生调度时当前进程的处理器现场。
+
+
+关于current:https://zhuanlan.zhihu.com/p/296750228
+https://zhuanlan.zhihu.com/p/363791563
