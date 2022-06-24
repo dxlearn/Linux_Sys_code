@@ -143,6 +143,12 @@ request_irq(unsigned int irq, irq_handler_t handler, unsigned long flags,const c
 	return request_threaded_irq(irq, handler, NULL, flags, name, dev);
 }
 ```
+关于抢占：
+1、硬中断可以被另一个优先级比自己高的硬中断“中断”，不能被同级(同一种硬中断)或低级硬中断“中断”，更不能被软中断“中断”。
+2、软中断可以被硬中断“中断”，但是不会被另一个软中断“中断”，在一个CPU上，软中断总是串行执行，所以单处理器上，对软中断的数据结构进行访问不需要加任何同步原语。
+
+硬中断和软中断(只要是中断上下文)，执行的时候都不允许内核抢占，换句话说，中断上下文中永远不允许进程切换。（个人理解，由于中断处理程序都需要较快地完成，而且中断处理程序可以嵌套，因此中断处理程序必须不能阻塞，否则性能就非常不能保证了。
+
 
  中断处理的流程：(https://blog.csdn.net/LuckyDog0623/article/details/120912442)
 ①发生中断时，cpu响应执行异常向量表__vectors_start  
