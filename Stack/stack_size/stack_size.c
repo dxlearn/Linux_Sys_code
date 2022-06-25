@@ -1,10 +1,6 @@
 #include <linux/init.h>
 #include <linux/module.h>
 #include <linux/sched.h>
-
-
-
-
 static int __init test_stack(void)
 {
     union thread_union *test;
