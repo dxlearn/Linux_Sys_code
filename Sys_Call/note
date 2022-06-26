@@ -1,2 +1,3 @@
 https://cloud.tencent.com/developer/article/1585838
 https://zhuanlan.zhihu.com/p/446785414
+Linux syscall过程分析：https://cloud.tencent.com/developer/article/1492374 手撸int 0x80
