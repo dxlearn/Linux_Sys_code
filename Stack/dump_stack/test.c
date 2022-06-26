@@ -1,7 +1,7 @@
 #include <linux/module.h>   
 #include <linux/kernel.h>
 #include <linux/init.h>
-#include <asm/ptrace.h>
+
  
 void aaa(int a);
 void bbb(int b);
