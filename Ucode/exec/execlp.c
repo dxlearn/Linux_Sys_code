@@ -11,7 +11,7 @@ int main(int argc,char *argv[])
         perror("fork error");
         exit(1);
     }else if(pid == 0){
-        execlp("ls","ls","-l","-d","-h",NULL);  //函数没有返回值，除非是出错
+        execlp("ls","ls","-l","-h",NULL);  //函数没有返回值，除非是出错
         perror("exec error");
         exit(1);
     }else if(pid >0){
