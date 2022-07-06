@@ -6,5 +6,5 @@ ALL:$(target)
 %:%.c
 	gcc $< -o $@
 clean:
-	-rm -rf$(target)
-.PHONY:clean ALL
+	-rm -rf $(target)
+.PHONY:clean ALL 
