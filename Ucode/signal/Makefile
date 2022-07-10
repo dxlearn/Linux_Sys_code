@@ -4,7 +4,7 @@ target = $(patsubst %.c,%,$(src))
 ALL:$(target)
 
 %:%.c
-	gcc $< -o $(target)
+	gcc $< -o $@
 clean:
 	-rm -rf $(target)
 .PHONY:clean ALL
